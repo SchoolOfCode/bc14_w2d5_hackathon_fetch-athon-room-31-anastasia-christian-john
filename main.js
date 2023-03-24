@@ -1,3 +1,4 @@
+console.clear();
 //Create an async function.
 let data = ``;
 async function getDefinition() {
