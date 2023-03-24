@@ -4,8 +4,14 @@ let data = ``;
 async function getDefinition() {
     const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_GB/${inputValue}`);
     const data = await response.json();
+    if(data.title === "No Definitions Found") {
+        document.querySelector("p").textContent = `${data.message} ${data.resolution}`;
+    } else {
+        document.querySelector("p").textContent = data[0].meanings[0].definitions[0].definition;
+    };
     console.log(data);
     console.log(data[0].meanings[0].definitions[0].definition);
+    // console.log(data.querySelector("title"));
     //console.log(data.querySelector("#definitions"));
   
 };
@@ -21,6 +27,10 @@ inputField.addEventListener('keyup', (event) => {
 let submitButton = document.getElementById("submitWord");
 submitButton.addEventListener('click', getDefinition);
 
+// if(data.title === 'No Definitions Found') {
+//     document.querySelector("p").textContent = data.message;
+// };
+
 //getDefinition();
 
 //Define where the location of the definition of hello is stored within the json packet.
@@ -34,7 +44,7 @@ submitButton.addEventListener('click', getDefinition);
     // add an event listener to the input field to track the user input✅
     // add an event listener to the submit button to trigger the fetch function✅
     // use the word inputted by user as the input to the getDefinition function✅
-// alter the api so that url is not specific to hello
+// alter the api so that url is not specific to hello ✅
 
 // what happens if the api does not contain the word the user has input
         // create a conditional statement to check if the word is in the api
