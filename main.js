@@ -46,10 +46,11 @@ submitButton.addEventListener('click', getDefinition);
     // use the word inputted by user as the input to the getDefinition function✅
 // alter the api so that url is not specific to hello ✅
 
-// what happens if the api does not contain the word the user has input
-        // create a conditional statement to check if the word is in the api
-        // return word not recognized try another word
-// display the definition on the page
-    // create a div on the HTML file
-    // create a p tag on the HTML file
-    // make the text within the p update with the definition
+// what happens if the api does not contain the word the user has input  ✅
+        // create a conditional statement to check if the word is in the api ✅
+        // return word not recognized try another word ✅
+// display the definition on the page ✅
+    // create a div on the HTML file ✅
+    // create a p tag on the HTML file ✅
+    // make the text within the p update with the definition ✅
+
